@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    background-color: rgb(143, 242, 143);
+    animation: fadeIn 2s ease-in-out;
+}
+header {
+    background-color: rgb(20, 83, 40);
+    color: rgb(58, 235, 19);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: (58,,235,19);
+    margin-bottom: 10px;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);  
+    height: 80px; 
+}
+
+
+
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;  
+    gap: 20px;
+    animation: slideIn 1s ease-out;
+}
+
+.navbar li a {
+    color: rgb(92, 215, 43);
+    text-decoration: wavy;
+    padding: 10px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar li a.active,
+.navbar li a:hover {
+    background: rgb(244, 149, 8);
+    color: rgb(247, 242, 242);
+    border-radius: 5px;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: aliceblue;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked + .menu-icon + .navbar {
+    display: block;
+    flex-direction: column;
+    background: skyblue;
+}
+
+@media(max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+    .navbar {
+        display: none;
+        width: 100%;
+    }
+    .navbar li {
+        text-align: center;
+    }
+}
+
+section .section-content h1 {
+    color: rgb(4, 7, 32);
+    font-size: 50px;
+    background-color: green;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+section .section-content h2 {
+    color: rgb(2, 4, 20);
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+section .section-content h3 {
+    color: rgb(7, 4, 31);
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    animation: fadeInUp 2.5s ease-in-out;
+}
+
+section img {
+    height: 700px;
+    width: 800px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 15px solid rgb(6, 56, 17); 
+    padding: 0px;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+section img h2 {
+    height: 700px;
+    width: 900px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 15px solid rgb(6, 56, 17); 
+    padding: 0px;
+    opacity: 0;
+    animation: fadeIn 3.5s forwards;
+}
+
+section h4 {
+    font-size: larger;
+    border: 15px solid rgb(6, 56, 17); 
+    padding: 0px;
+    line-height: 2;
+    animation: fadeInUp 3s ease-in-out;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+footer {
+    background-color: rgb(13, 111, 28);
+    color: rgb(194, 147, 17);
+    padding: 20px;
+    text-align: center;
+    animation: slideIn 2s ease-out;
+    font-size: larger;
+   
+}
+
+
+.footer-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.footer-coi h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-coi ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-coi ul li {
+    margin: 10px 0;
+}
+
+.footer-coi ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    transition: color 0.3s ease;
+}
+
+.footer-coi ul li a:hover {
+    color: rgb(214, 20, 20);
+}
+
+.footer-col form {
+    margin-top: 10px;
+}
+
+.footer-col input {
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.footer-col button {
+    padding: 10px;
+    border-radius: 10px;
+    background: rgb(6, 236, 33);
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-col button:hover {
+    background: rgb(212, 17, 17);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}

@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+header {
+    background-color: rgb(25, 113, 29);
+    color: rgb(5, 5, 5);
+    padding: 10px 20px;
+    margin-right: 5px;
+    margin-left: auto;
+    text-align: center;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 80px;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar li a {
+    color: rgb(20, 223, 50);
+    text-decoration: wavy;
+    padding: 10px;
+}
+
+.navbar li a.active,
+.navbar li a:hover {
+    background: rgb(231, 145, 15);
+    color: rgb(71, 222, 25);
+    border-radius: 5px;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: rgb(16, 228, 48);
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked + .menu-icon + .navbar {
+    display: block;
+    flex-direction: column;
+    background: skyblue;
+}
+
+@media(max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+    .navbar {
+        display: none;
+        width: 100%;
+    }
+    .navbar li {
+        text-align: center;
+    }
+}
+
+section .section-content h1 {
+    color: black;
+    font-size: 50px;
+    background-color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+section .section-content h2 {
+    color: red;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+section img {
+    height: 500px;
+    width: 1000px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    background-image: url("PHOTOS/leafff.gif");
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    height: 100vh;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: left;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    font-size: larger;
+}
+
+.footer-row .footer-cat {
+    text-align: left; 
+}
+
+.footer-row .footer-cate {
+    text-align: center; 
+}
+
+.footer-row .footer-cote {
+    text-align: right;  
+}
+
+.footer-col h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin: 10px 0;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.footer-col ul li a:hover {
+    color: white;
+}
+
+.footer-col form {
+    margin-top: 10px;
+}
+
+.footer-col input {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.footer-col button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: white;
+    color: black;
+    cursor: pointer;
+}
+
+.footer-col button:hover {
+    background: lightgray; 
+}
